@@ -4,120 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nosotros - Restobar</title>
+    <link rel="stylesheet" href="/css/styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Asegurar que el cuerpo ocupe toda la altura de la ventana */
+        html, body {
+            height: 100%;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
         }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
+
+        /* Contenedor principal que usa flexbox */
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
-        header {
-            background: #333;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #77aaff 3px solid;
-        }
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-        header li {
-            float: left;
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-        header #branding {
-            float: left;
-        }
-        header #branding h1 {
-            margin: 0;
-        }
-        header nav {
-            float: right;
-            margin-top: 10px;
-        }
-        .showcase {
-            min-height: 400px;
-            background: url('parrilla.jpg') no-repeat 0 -400px;
-            text-align: center;
-            color: #fff;
-        }
-        .showcase h1 {
-            margin-top: 100px;
-            font-size: 55px;
-            margin-bottom: 10px;
-        }
-        .showcase p {
-            font-size: 20px;
-        }
+
+        /* El contenido se ajusta al espacio disponible, manteniendo el footer abajo */
         .content {
+            flex: 1;
+            padding: 40px 20px;
+            background-color: #fff;
+        }
+
+        .about-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+        .about-section img {
+            width: 50%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .about-section .text {
+            flex: 1;
             padding: 20px;
-            background: #fff;
-        }
-        .content h2 {
-            text-align: center;
             color: #333;
+            font-size: 1.1em;
         }
-        .content p {
-            font-size: 18px;
+        .about-section h2 {
+            font-size: 2.5em;
+            color: #444;
+            font-family: 'Georgia', serif;
+        }
+        .about-section p {
+            margin: 15px 0;
             line-height: 1.6;
         }
+        .info-section {
+            margin-top: 40px;
+        }
+        .info-section h3 {
+            margin-bottom: 10px;
+            font-size: 1.8em;
+            color: #444;
+            font-family: 'Georgia', serif;
+        }
+        .info-section p {
+            margin: 5px 0;
+            color: #555;
+            font-size: 1.1em;
+        }
         footer {
-            background: #333;
-            color: #fff;
+            background-color: #333;
+            color: white;
             text-align: center;
             padding: 10px 0;
-            margin-top: 20px;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div id="branding">
-                <h1>Restobar Parrillas</h1>
+    <div class="main-container">
+        <header>
+            <div class="container">
+                <div id="branding">
+                    <h1>La Parrilla de Chugo</h1>
+                </div>
+                <nav>
+                    <ul class="menu__links">
+                        <li class="menu__item"><a href="/" class="menu__link">Inicio</a></li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Menú</a>
+                            <ul class="menu__nesting">
+                                <li class="menu__inside"><a href="/platos" class="menu__link menu__link--inside">Platos</a></li>
+                                <li class="menu__inside"><a href="/bebidas" class="menu__link menu__link--inside">Bebidas</a></li>
+                                <li class="menu__inside"><a href="/promociones" class="menu__link menu__link--inside">Promociones</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu__item"><a href="/about" class="menu__link">Sobre Nosotros</a></li>
+                        <li class="menu__item"><a href="/contact" class="menu__link">Contacto</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/menu">Menú</a></li>
-                    <li><a href="/contacto">Contacto</a></li>
-                    <li><a href="/sobrenosotros">Sobre Nosotros</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        </header>
 
-    <section class="showcase">
-        <div class="container">
-            <h1>Bienvenidos a Restobar Parrillas</h1>
-            <p>Donde la mejor parrilla se encuentra con el mejor ambiente.</p>
-        </div>
-    </section>
+        <section class="content">
+            <div class="container">
+                <section class="about-section">
+                    <img src="https://scontent.flim15-1.fna.fbcdn.net/v/t39.30808-6/428332457_377263088447652_5417806449298894036_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=0MpFfnoiftQQ7kNvgFBwUqU&_nc_oc=AdgHKARvaEc8b5oREF0il2vWJoK6jnMWGLgusYh6WJ2P8DPINUG20R9TSu0G-A9mwEphI1yhJjFA4unRStnSjVDl&_nc_zt=23&_nc_ht=scontent.flim15-1.fna&_nc_gid=Ao3ZLamtyKfU_vf9trUhrFT&oh=00_AYC8wmo0TEZ1pQqaXKikSHVHdmkBsJ8Z4shkpk31DFilfQ&oe=67964D5C" alt="Restobar" />
+                    <div class="text">
+                        <h2>Sobre Nosotros</h2>
+                        <p>En <strong>La Parrilla de Chugo</strong>, nos especializamos en ofrecer una experiencia gastronómica única, destacándonos por la calidad de nuestros productos y el ambiente acogedor que brindamos a nuestros clientes. Nuestro compromiso es ofrecer las mejores parrillas de la ciudad, elaboradas con los ingredientes más frescos y de la más alta calidad.</p>
+                        <p>Desde nuestra apertura, hemos trabajado arduamente para convertirnos en el establecimiento preferido de los amantes de la parrilla. Nuestras recetas están diseñadas para resaltar los sabores auténticos, cuidando cada detalle para garantizar la satisfacción de nuestros comensales.</p>
+                        <p>Le extendemos una cordial invitación a visitarnos y disfrutar de una experiencia culinaria que quedará grabada en su memoria. ¡Esperamos darle la bienvenida pronto!</p>
+                    </div>
+                </section>
+            </div>
+        </section>
 
-    <section class="content">
-        <div class="container">
-            <h2>Sobre Nosotros</h2>
-            <p>En Restobar Parrillas, nos especializamos en ofrecer las mejores parrillas de la ciudad. Nuestro compromiso es brindar una experiencia gastronómica única, combinando la calidad de nuestros productos con un ambiente acogedor y un servicio excepcional.</p>
-            <p>Desde nuestros inicios, hemos trabajado arduamente para convertirnos en el lugar preferido de los amantes de la parrilla. Utilizamos ingredientes frescos y de alta calidad, y nuestras recetas están diseñadas para resaltar los sabores auténticos de la parrilla.</p>
-            <p>Te invitamos a visitarnos y disfrutar de una experiencia culinaria inolvidable. ¡Esperamos verte pronto!</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>Restobar Parrillas &copy; 2023</p>
-    </footer>
+        <footer>
+            <p>&copy; 2023 Restobar Parrillas. Todos los derechos reservados.</p>
+        </footer>
+    </div>
 </body>
 </html>

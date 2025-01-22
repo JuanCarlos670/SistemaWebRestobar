@@ -8,7 +8,10 @@ const app = express();
 const __dirname = dirname(fileURLToPath(import.meta.url));
 app.set('views', join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use(express.static('public')); 
+
 app.use(router);
+
 // app.get('/', (req, res) => res.render('index'));
 app.listen(3000);
 console.log('Server is running on http://localhost:3000');
