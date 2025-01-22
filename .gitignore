@@ -60,7 +60,7 @@ public
 
 # vue / cli-service build output
 dist/
-public/
+# public/
 
 # Storybook build outputs
 .out/
