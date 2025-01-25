@@ -3,111 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros - Restobar</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <style>
-        /* Asegurar que el cuerpo ocupe toda la altura de la ventana */
-        html, body {
-            height: 100%;
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-        }
-
-        /* Contenedor principal que usa flexbox */
-        .main-container {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        /* El contenido se ajusta al espacio disponible, manteniendo el footer abajo */
-        .content {
-            flex: 1;
-            padding: 40px 20px;
-            background-color: #fff;
-        }
-
-        .about-section {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 40px;
-        }
-        .about-section img {
-            width: 50%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .about-section .text {
-            flex: 1;
-            padding: 20px;
-            color: #333;
-            font-size: 1.1em;
-        }
-        .about-section h2 {
-            font-size: 2.5em;
-            color: #444;
-            font-family: 'Georgia', serif;
-        }
-        .about-section p {
-            margin: 15px 0;
-            line-height: 1.6;
-        }
-        .info-section {
-            margin-top: 40px;
-        }
-        .info-section h3 {
-            margin-bottom: 10px;
-            font-size: 1.8em;
-            color: #444;
-            font-family: 'Georgia', serif;
-        }
-        .info-section p {
-            margin: 5px 0;
-            color: #555;
-            font-size: 1.1em;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 40px;
-        }
-    </style>
+    <title><%=title %></title>
+    <%- include('partials/head') %>
+    
 </head>
 <body>
     <div class="main-container">
-        <header>
-            <div class="container">
-                <div id="branding">
-                    <h1>La Parrilla de Chugo</h1>
-                </div>
-                <nav>
-                    <ul class="menu__links">
-                        <li class="menu__item"><a href="/" class="menu__link">Inicio</a></li>
-                        <li class="menu__item">
-                            <a href="#" class="menu__link">Menú</a>
-                            <ul class="menu__nesting">
-                                <li class="menu__inside"><a href="/platos" class="menu__link menu__link--inside">Platos</a></li>
-                                <li class="menu__inside"><a href="/bebidas" class="menu__link menu__link--inside">Bebidas</a></li>
-                                <li class="menu__inside"><a href="/promociones" class="menu__link menu__link--inside">Promociones</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu__item"><a href="/about" class="menu__link">Sobre Nosotros</a></li>
-                        <li class="menu__item"><a href="/contact" class="menu__link">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        <%- include('partials/navigation') %>
 
         <section class="content">
             <div class="container">
                 <section class="about-section">
-                    <img src="https://scontent.flim15-1.fna.fbcdn.net/v/t39.30808-6/428332457_377263088447652_5417806449298894036_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=0MpFfnoiftQQ7kNvgFBwUqU&_nc_oc=AdgHKARvaEc8b5oREF0il2vWJoK6jnMWGLgusYh6WJ2P8DPINUG20R9TSu0G-A9mwEphI1yhJjFA4unRStnSjVDl&_nc_zt=23&_nc_ht=scontent.flim15-1.fna&_nc_gid=Ao3ZLamtyKfU_vf9trUhrFT&oh=00_AYC8wmo0TEZ1pQqaXKikSHVHdmkBsJ8Z4shkpk31DFilfQ&oe=67964D5C" alt="Restobar" />
+                    <img src="/img/nosotros.jpg" alt="Restobar" />
                     <div class="text">
                         <h2>Sobre Nosotros</h2>
                         <p>En <strong>La Parrilla de Chugo</strong>, nos especializamos en ofrecer una experiencia gastronómica única, destacándonos por la calidad de nuestros productos y el ambiente acogedor que brindamos a nuestros clientes. Nuestro compromiso es ofrecer las mejores parrillas de la ciudad, elaboradas con los ingredientes más frescos y de la más alta calidad.</p>
@@ -119,8 +26,10 @@
         </section>
 
         <footer>
-            <p>&copy; 2023 Restobar Parrillas. Todos los derechos reservados.</p>
+            <p>&copy; 2025 La Parrilla de Chugo. Todos los derechos reservados.</p>
         </footer>
     </div>
+    <!--=============== MAIN JS ===============-->
+    <script src="/js/main.js"></script>
 </body>
 </html>
