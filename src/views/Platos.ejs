@@ -7,101 +7,174 @@
       <%- include('partials/head') %>
    </head>
    <body>
+      
     <%- include('partials/navigation') %>
- 
-     <section class="menu-section">
-         <div class="container">
-             <h2>Favoritos de Nuestros Clientes</h2><br>
-             <div class="menu-items">
-                 <div class="menu-item">
-                     <img src="https://imag.bonviveur.com/hamburguesa-clasica.jpg" alt="Plato 1">
-                     <h3>Hamburguesa Clasica</h3>
-                     <p>S/8.00</p>
-                     <button class="add-to-cart">Añadir al carrito</button>
-                 </div>
-                 <div class="menu-item">
-                     <img src="/img/monstruo-burger.jpg" alt="Plato 2">
-                     <h3>Mostri Burger</h3>
-                     <p>S/12.00</p>
-                     <button class="add-to-cart">Añadir al carrito</button>
-                 </div>
-                 <div class="menu-item">
-                     <img src="https://makimaky.com/wp-content/uploads/2023/11/Alitas-Acevichadas-1024x1024.jpg" alt="Plato 3">
-                     <h3>Alitas Acevichadas</h3>
-                     <p>S/20.00</p>
-                     <button class="add-to-cart">Añadir al carrito</button>
-                 </div>
- 
-                 <div class="menu-item">
-                     <img src="https://panaderialalos.com/wp-content/uploads/2021/03/Tequenos-1.jpg" alt="Plato 4">
-                     <h3>Tequeños</h3>
-                     <p>S/11.00</p>
-                     <button class="add-to-cart">Añadir al carrito</button>
-                 </div>
- 
-                 <div class="menu-item">
-                     <img src="https://mandolina.co/wp-content/uploads/2024/02/anticuchos-brasilenos-1080x550-1-1200x675.jpg" alt="Plato 5">
-                     <h3>Anticucho</h3>
-                     <p>S/18.00</p>
-                     <button class="add-to-cart">Añadir al carrito</button>
-                 </div>
- 
-                 <div class="menu-item">
-                     <img src="/img/alitas-maracuya.jpg" alt="Plato 6">
-                     <h3>Alitas Maracuya</h3>
-                     <p>S/19.00</p>
-                     <button class="add-to-cart">Añadir al carrito</button>
-                 </div>
 
-                 <div class="menu-item">
-                    <img src="/img/pollo-broaster.jpeg" alt="Plato 7">
-                    <h3>Pollo Broaster</h3>
-                    <p>S/17.00</p>
-                    <button class="add-to-cart">Añadir al carrito</button>
-                </div>
+<!-- Sección de tarjetas debajo del título -->
+    <div class="mt-4"></div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center"> <!-- Asegura que las tarjetas se centren en todo tamaño de pantalla -->
+    
+        <!-- Hamburguesa Clasica -->
+        <div class="col-md-4 d-flex justify-content-center mb-4">
+            <div class="card" style="width: 18rem;">
+            <img src="https://imag.bonviveur.com/hamburguesa-clasica.jpg" class="card-img-top" alt="Plato 1">
+            <div class="card-body">
+                <h5 class="card-title text-center">Hamburguesa Clasica</h5>
+                <p class="card-text text-center">hamburguesa clásica con carne de res, queso, lechuga y tomate.</p>
+                <p class="card-price text-center">S/8.00</p>
+                <button class="btn btn-danger d-block mx-auto">Añadir al carrito</button>
+            </div>
+            </div>
+        </div>
+    
+        <!-- Tequila -->
+        <div class="col-md-4 d-flex justify-content-center mb-4">
+            <div class="card" style="width: 18rem;">
+            <img src="/img/monstruo-burger.jpg" class="card-img-top" alt="Plato 2">
+            <div class="card-body">
+                <h5 class="card-title text-center">Mostri Burger</h5>
+                <p class="card-text text-center">Hamburguesa gigante con carne, bacon, queso y una salsa especial.</p>
+                <p class="card-price text-center">S/12.00</p>
+                <button class="btn btn-danger d-block mx-auto">Añadir al carrito</button>
+            </div>
+            </div>
+        </div>
+    
+        <!-- Alitas Acevichadas -->
+        <div class="col-md-4 d-flex justify-content-center mb-4">
+            <div class="card" style="width: 18rem;">
+            <img src="https://makimaky.com/wp-content/uploads/2023/11/Alitas-Acevichadas-1024x1024.jpg" class="card-img-top" alt="Plato 3">
+            <div class="card-body">
+                <h5 class="card-title text-center">Alitas Acevichadas</h5>
+                <p class="card-text text-center">Alitas marinadas con una salsa de ceviche, perfectas para picar.</p>
+                <p class="card-price text-center">S/20.00</p>
+                <button class="btn btn-danger d-block mx-auto">Añadir al carrito</button>
+            </div>
+            </div>
+        </div>
+    
+        <!-- Tequeños -->
+        <div class="col-md-4 d-flex justify-content-center mb-4">
+            <div class="card" style="width: 18rem;">
+            <img src="https://panaderialalos.com/wp-content/uploads/2021/03/Tequenos-1.jpg" class="card-img-top" alt="Plato 4">
+            <div class="card-body">
+                <h5 class="card-title text-center">Tequeños</h5>
+                <p class="card-text text-center">Deliciosos tequeños rellenos de queso, perfectos para compartir en familia.</p>
+                <p class="card-price text-center">S/11.00</p>
+                <button class="btn btn-danger d-block mx-auto">Añadir al carrito</button>
+            </div>
+            </div>
+        </div>
+    
+        <!-- Anticucho -->
+        <div class="col-md-4 d-flex justify-content-center mb-4">
+            <div class="card" style="width: 18rem;">
+            <img src="https://mandolina.co/wp-content/uploads/2024/02/anticuchos-brasilenos-1080x550-1-1200x675.jpg" class="card-img-top" alt="Plato 5">
+            <div class="card-body">
+                <h5 class="card-title text-center">Anticucho</h5>
+                <p class="card-text text-center">Carne de res marinada en especias y servida en brochetas, un clásico sabor peruano.</p>
+                <p class="card-price text-center">S/18.00</p>
+                <button class="btn btn-danger d-block mx-auto">Añadir al carrito</button>
+            </div>
+            </div>
+        </div>
+    
+        <!-- Jarra de Chicha Morada -->
+        <div class="col-md-4 d-flex justify-content-center mb-4">
+            <div class="card" style="width: 18rem;">
+            <img src="/img/pollo-broaster.jpeg" class="card-img-top" alt="Plato 6">
+            <div class="card-body">
+                <h5 class="card-title text-center">Pollo Broaster</h5>
+                <p class="card-text text-center">Pollo frito crujiente por fuera y jugoso por dentro, acompañado con papas.</p>
+                <p class="card-price text-center">S/17.00</p>
+                <button class="btn btn-danger d-block mx-auto">Añadir al carrito</button>
+            </div>
+            </div>
+        </div>
 
-                <div class="menu-item">
-                    <img src="/img/alitas-barbecue.png" alt="Plato 8">
-                    <h3>Alitas Barbecue</h3>
-                    <p>S/21.00</p>
-                    <button class="add-to-cart">Añadir al carrito</button>
-                </div>
+        <!-- Jarra de Chicha Morada -->
+        <div class="col-md-4 d-flex justify-content-center mb-4">
+            <div class="card" style="width: 18rem;">
+            <img src="/img/alitas-maracuya.jpg" class="card-img-top" alt="Plato 7">
+            <div class="card-body">
+                <h5 class="card-title text-center">Alitas Maracuya</h5>
+                <p class="card-text text-center">Alitas de pollo con una salsa dulce y ácida de maracuyá.</p>
+                <p class="card-price text-center">S/19.00</p>
+                <button class="btn btn-danger d-block mx-auto">Añadir al carrito</button>
+            </div>
+            </div>
+        </div>
 
-                <div class="menu-item">
-                    <img src="/img/lomo.jpg" alt="Plato 9">
-                    <h3>Lomo Saltado</h3>
-                    <p>S/18.00</p>
-                    <button class="add-to-cart">Añadir al carrito</button>
-                </div>
+        <!-- Jarra de Chicha Morada -->
+        <div class="col-md-4 d-flex justify-content-center mb-4">
+            <div class="card" style="width: 18rem;">
+            <img src="/img/alitas-barbecue.png" class="card-img-top" alt="Plato 8">
+            <div class="card-body">
+                <h5 class="card-title text-center">Alitas Barbecue</h5>
+                <p class="card-text text-center">Alitas de pollo bañadas en una deliciosa salsa barbacoa.</p>
+                <p class="card-price text-center">S/21.00</p>
+                <button class="btn btn-danger d-block mx-auto">Añadir al carrito</button>
+            </div>
+            </div>
+        </div>
 
-                <div class="menu-item">
-                    <img src="/img/polloalaparrilla.jpg" alt="Plato 10">
-                    <h3>Pollo a la Parrilla</h3>
-                    <p>S/19.00</p>
-                    <button class="add-to-cart">Añadir al carrito</button>
-                </div>
+        <!-- Jarra de Chicha Morada -->
+        <div class="col-md-4 d-flex justify-content-center mb-4">
+            <div class="card" style="width: 18rem;">
+            <img src="/img/lomo.jpg" class="card-img-top" alt="Plato 9">
+            <div class="card-body">
+                <h5 class="card-title text-center">Lomo Saltado</h5>
+                <p class="card-text text-center">Plato tradicional peruano con carne de res, cebolla y papas fritas.</p>
+                <p class="card-price text-center">S/18.00</p>
+                <button class="btn btn-danger d-block mx-auto">Añadir al carrito</button>
+            </div>
+            </div>
+        </div>
 
-                <div class="menu-item">
-                    <img src="/img/costillas-de-cerdo-al-horno.jpg" alt="Plato 11">
-                    <h3>Chancho a la Parrilla</h3>
-                    <p>S/22.00</p>
-                    <button class="add-to-cart">Añadir al carrito</button>
-                </div>
+        <!-- Jarra de Chicha Morada -->
+        <div class="col-md-4 d-flex justify-content-center mb-4">
+            <div class="card" style="width: 18rem;">
+            <img src="/img/polloalaparrilla.jpg" class="card-img-top" alt="Plato 10">
+            <div class="card-body">
+                <h5 class="card-title text-center">Pollo a la Parrilla</h5>
+                <p class="card-text text-center">Pollo asado a la parrilla con su textura deliciosa, servido con ensalada y papas fritas.</p>
+                <p class="card-price text-center">S/19.00</p>
+                <button class="btn btn-danger d-block mx-auto">Añadir al carrito</button>
+            </div>
+            </div>
+        </div>
 
-                <div class="menu-item">
-                    <img src="/img/Popcorn.jpg" alt="Plato 12">
-                    <h3>Popcorn Chicken</h3>
-                    <p>S/14.00</p>
-                    <button class="add-to-cart">Añadir al carrito</button>
-                </div>
-             </div>
-         </div>
-     </section>
-     
-     <footer>
-         <p>&copy; 2025 La Parrilla de Chugo. Todos los derechos reservados.</p>
-     </footer>
-      <!--=============== MAIN JS ===============-->
-      <script src="/js/main.js"></script>
+        <!-- Jarra de Chicha Morada -->
+        <div class="col-md-4 d-flex justify-content-center mb-4">
+            <div class="card" style="width: 18rem;">
+            <img src="/img/costillas-de-cerdo-al-horno.jpg" class="card-img-top" alt="Plato 11">
+            <div class="card-body">
+                <h5 class="card-title text-center">Chancho a la Parrilla</h5>
+                <p class="card-text text-center">Costillas de cerdo marinadas y asadas a la parrilla, acompañadas con papas.</p>
+                <p class="card-price text-center">S/22.00</p>
+                <button class="btn btn-danger d-block mx-auto">Añadir al carrito</button>
+            </div>
+            </div>
+        </div>
+
+        <!-- Jarra de Chicha Morada -->
+        <div class="col-md-4 d-flex justify-content-center mb-4">
+            <div class="card" style="width: 18rem;">
+            <img src="/img/Popcorn.jpg" class="card-img-top" alt="Plato 12">
+            <div class="card-body">
+                <h5 class="card-title text-center">Popcorn Chicken</h5>
+                <p class="card-text text-center">Pequeños trozos de pollo crujientes, perfectos para acompañar cualquier comida.</p>
+                <p class="card-price text-center">S/14.00</p>
+                <button class="btn btn-danger d-block mx-auto">Añadir al carrito</button>
+            </div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>
    </body>
 </html>

@@ -1,304 +1,85 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%=title %></title>
-    <style>
-     /* Estilos generales */
-        body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        }
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('https://scontent.flim15-2.fna.fbcdn.net/v/t39.30808-6/405693280_324714787035816_2042136770193026549_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=NS_MFcbi_A8Q7kNvgEpNUpv&_nc_oc=Adi6khJWavBgwAJATNbu3YcO-LPgpUY44qn2SAVzMFbRceqVmbYCBi0QPz_bT6J56PruwH-gEpDm6uG66xY9b-Bl&_nc_zt=23&_nc_ht=scontent.flim15-2.fna&_nc_gid=Az15vicI4m2DABNWEYg3UGr&oh=00_AYBJgsdCNsoh4Z04FBv1s1DR1urygt7cidQwxV8f82Pa-g&oe=679EF71D');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        .app-header {
-        position: relative; /* Asegúrate de que no esté en fixed */
-        z-index: 1000; /* Ajusta el índice si hay superposiciones */
-        }
-        .login-container {
-        display: flex;
-        height: 100vh;
-        }
+    .register-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
 
-        /* Imagen del lado izquierdo */
-        .login-image {
-        width: 50%;
-        }
+    .register-card h2 {
+      font-weight: bold;
+    }
 
-        .login-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        }
+    .btn-primary {
+      background-color: #8d1130;
+      border: none;
+    }
 
-        /* Sección de formulario de login */
-        .login-form {
-        width: 50%;
-        padding: 50px;
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        }
-
-        .logo img {
-        width: 150px;
-        margin-bottom: 20px;
-        }
-
-        h2 {
-        font-size: 18px;
-        margin-bottom: 10px;
-        text-align: center;
-        }
-
-        p {
-        font-size: 14px;
-        color: #555;
-        margin-bottom: 30px;
-        text-align: center;
-        }
-
-        form {
-        width: 100%;
-        max-width: 350px;
-        display: flex;
-        flex-direction: column;
-        }
-        input[type="text"],
-        input[type="tel"],
-        input[type="email"],
-        input[type="password"] {
-        padding: 15px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-        }
-
-        button {
-        padding: 15px;
-        background-color: #333;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        }
-
-        button:hover {
-        background-color: hsl(251, 16%, 34%);
-        }
-
-        a {
-        display: block;
-        margin-top: 20px;
-        font-size: 14px;
-        color: #555;
-        text-align: center;
-        text-decoration: none;
-        }
-
-        a:hover {
-        text-decoration: underline;
-        }
-
-        /* Estilos generales para el submenú */
-        .styled-submenu {
-        display: none;
-        padding-left: 15px;
-        margin-top: 5px;
-        border-left: 2px solid #007bff; /* Línea azul para marcar el submenú */
-        background-color: #f8f9fa; /* Fondo claro para resaltar el submenú */
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
-        transition: all 0.3s ease-in-out; /* Efecto de transición suave */
-        }
-
-        .sidebar-item .has-arrow[aria-expanded="true"] + .styled-submenu {
-        display: block;
-        animation: slideIn 0.3s ease-in-out; /* Animación para que el submenú aparezca deslizándose */
-        }
-
-        @keyframes slideIn {
-        from {
-            opacity: 0;
-            transform: translateY(-10px); /* Movimiento de deslizamiento hacia abajo */
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        }
-
-        .styled-submenu .sidebar-item {
-        padding: 8px 0;
-        }
-
-        .styled-submenu .sidebar-link {
-        display: flex;
-        align-items: center;
-        padding: 8px 15px;
-        color: #495057; /* Color de texto elegante */
-        font-size: 0.9rem;
-        transition: background 0.3s, color 0.3s; /* Transición suave para el hover */
-        }
-
-        .styled-submenu .sidebar-link:hover {
-        background-color: #007bff; /* Fondo azul al pasar el mouse */
-        color: #fff; /* Texto blanco */
-        border-radius: 5px; /* Bordes redondeados */
-        box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3); /* Sombra con el color del hover */
-        }
-
-        .styled-submenu .sidebar-link i {
-        margin-right: 8px; /* Espacio entre el icono y el texto */
-        font-size: 1rem; /* Tamaño de icono adecuado */
-        transition: color 0.3s; /* Transición suave para el color del icono */
-        }
-
-        .styled-submenu .sidebar-link:hover i {
-        color: #fff; /* Color de icono blanco al pasar el mouse */
-        }
-        /* Estilos para la sección de bienvenida */
-        .welcome-section {
-        background-color: #f8f9fa; /* Fondo claro para destacar la sección */
-        padding: 40px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-        }
-
-        .welcome-section h1 {
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #333; /* Color oscuro para el texto */
-        }
-
-        .welcome-section p {
-        font-size: 1.2rem;
-        color: #555; /* Color gris para el párrafo */
-        }
-
-        /* Estilos para las tarjetas de cursos */
-        .course-card {
-        border: none; /* Sin borde */
-        border-radius: 10px; /* Bordes redondeados */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-        transition: transform 0.3s, box-shadow 0.3s; /* Efectos de transición */
-        }
-
-        .course-card:hover {
-        transform: translateY(-5px); /* Efecto de elevación */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
-        }
-
-        .course-card img {
-        border-top-left-radius: 10px; /* Bordes redondeados en la parte superior */
-        border-top-right-radius: 10px;
-        }
-
-        .course-card .card-body {
-        padding: 20px;
-        background-color: #fff; /* Fondo blanco */
-        }
-
-        .course-card .card-title {
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #007bff; /* Color azul para el título */
-        }
-
-        .course-card .card-text {
-        font-size: 0.95rem;
-        color: #777; /* Color gris para el texto */
-        }
-
-        .course-card .btn {
-        background-color: hsl(251, 16%, 34%); /* Fondo azul para el botón */
-        border: none; /* Sin borde */
-        transition: background-color 0.3s; /* Transición de color */
-        }
-
-        .course-card .btn:hover {
-        background-color: #a5155d; /* Color más oscuro al pasar el mouse */
-        }
-
-        .card {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        }
-
-        .card-img-top {
-        object-fit: cover; /* Ajusta la imagen al contenedor */
-        height: 200px; /* Define una altura fija para todas las imágenes */
-        }
-
-        .card-body {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        }
-
-        .card-title {
-        font-size: 18px;
-        margin-bottom: 10px;
-        }
-
-        .card-text {
-        font-size: 14px;
-        margin-bottom: 10px;
-        }
-
-        .btn {
-            background-color: hsl(251, 16%, 34%); /* Color de fondo del botón (guinda) */
-            color: #fff; /* Color del texto del botón */
-            align-self: center;
-            margin-top: auto;
-            padding: 10px 20px; /* Ajusta el padding según sea necesario */
-            border-radius: 5px; /* Ajusta el radio del borde según sea necesario */
-            border: none; /* Sin borde */
-            transition: background-color 0.3s; /* Transición de color */
-        }
-
-    </style>
-    <script>
-        function redirigir() {
-        window.location.href = "/";
-        }
-    </script>
-  </head>
-  <body>
-    <div class="login-container">
-      <div class="login-image">
-        <img src="https://scontent.flim15-2.fna.fbcdn.net/v/t39.30808-6/349328877_1190062274881543_3307386167228756518_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=CNv_iY6IY_sQ7kNvgF-ywfs&_nc_oc=Adj6z6O10QnCS0pFO9G6PCOX-U4nHiwmTdHMUADQtbscMQB6VyxJrNuYrqHr8Nzwf5ciPtq4u6ZEnq62loW-oz2y&_nc_zt=23&_nc_ht=scontent.flim15-2.fna&_nc_gid=ABDRcZTTwx8u6KWuGtTYW0X&oh=00_AYD92I3Xtw9ykCLGwGrG5ezyLNfR-t2FX4nLogXkmvsAKw&oe=679A276E" alt="Building" />
-      </div>
-
-      <div class="login-form">
-        <div class="logo">
-          <img src="/img/login_prinicipal.jpg" alt="Logo" />
+    .btn-primary:hover {
+      background-color: #8d1130;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5">
+        <div class="register-card">
+          <h2 class="text-center mb-4">Registro</h2>
+          <form>
+            <div class="mb-3">
+              <label for="nombres" class="form-label">Ingresa tus nombres:</label>
+              <input type="text" class="form-control" id="nombres">
+            </div>
+            <div class="mb-3">
+              <label for="apellidos" class="form-label">Ingresa tus apellidos:</label>
+              <input type="text" class="form-control" id="apellidos">
+            </div>
+            <div class="mb-3">
+              <label for="dni" class="form-label">Ingresa tu DNI:</label>
+              <input type="text" class="form-control" id="dni" maxlength="8">
+            </div>
+            <div class="mb-3">
+              <label for="celular" class="form-label">Ingresa tu número de celular:</label>
+              <input type="text" class="form-control" id="celular" maxlength="9">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Ingresa tu correo electrónico:</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Ingresa tu contraseña:</label>
+              <input type="password" class="form-control" id="password">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Registrar</button>
+          </form>
+          <p class="text-center mt-3">
+            <a href="/login" class="text-decoration-none">¿Ya tienes una cuenta? Inicia sesión</a>
+          </p>
         </div>
-        <h2>Bienvenidos a la Parilla de Chugo</h2>
-        <p>
-            Por favor, completa el siguiente formulario para registrar tus datos.
-        </p>
-
-        <form onsubmit="redirigir(); return false;">
-            <input type="text" placeholder="Nombres" required />
-            <input type="text" placeholder="Apellidos" required />
-            <input type="text" placeholder="DNI" required pattern="\d{8}" />
-            <input type="tel" placeholder="Celular" required pattern="^\d{9}$" />
-            <input type="email" placeholder="Correo electrónico" required />
-            <input type="password" placeholder="Contraseña" required />
-            <button type="submit">Registrar</button>
-        </form>
       </div>
     </div>
-  </body>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
-
-

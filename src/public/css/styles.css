@@ -1,387 +1,114 @@
-/*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+    /* Estilo para la imagen del usuario */
+    .user-img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    
+    .nav-item .dropdown-menu {
+      padding: 3px 0; /* Reducir el espacio dentro del menú desplegable */
+    }
+    
+    /* Reducir el tamaño de las opciones del dropdown */
+    .dropdown-menu .dropdown-item {
+      font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+      padding: 5px 10px; /* Reducir el padding de cada opción */
+    }
 
-/*=============== VARIABLES CSS ===============*/
-:root {
-  --header-height: 4.5rem;
-
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(0, 0%, 100%);
-  --white-color: hsl(0, 0%, 100%);
-  --dark-color: hsl(251, 16%, 34%);
-  --dark-color-light: hsl(216, 14%, 24%);
-  --body-color: hsl(216, 96%, 98%);
-
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Montserrat", sans-serif;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-
-  /*========== Font weight ==========*/
-  --font-medium: 500;
-  --font-semi-bold: 600;
-
-  /*========== z index ==========*/
-  --z-tooltip: 10;
-  --z-fixed: 100;
-}
-
-/*========== Responsive typography ==========*/
-@media screen and (min-width: 1150px) {
-  :root {
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
+    /* Reducir el ancho del menú desplegable */
+  .dropdown-menu {
+      min-width: 120px; /* Ajusta el ancho mínimo del dropdown */
   }
+  
+  /* Reducir el padding de los items dentro del dropdown */
+  .dropdown-item {
+      padding: 5px 10px; /* Ajusta el espacio interno de cada item */
+      font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+  }
+
+  .navbar {
+      background-color: #6b4818; /* Marrón claro */
+  }
+
+      /* Redondear la imagen del logo */
+      .navbar-brand img {
+          border-radius: 50%; /* Hace que la imagen sea circular */
+        }
+    
+        /* Cambiar el color de las letras a blanco */
+        .navbar-nav .nav-link {
+          color: white !important; /* Fuerza que el texto sea blanco */
+        }
+    
+        .navbar-nav .nav-link:hover {
+          color: #ffffff !important; /* Puedes cambiar el color del hover si lo deseas */
+        }
+
+        /* Cambiar color del icono de menú (hamburger) cuando se visualiza en dispositivos pequeños */
+/* Cambiar el color de fondo del menú desplegado a blanco */
+.navbar-collapse {
+background-color: #6b4818 !important; /* Fondo blanco cuando el menú se expande */
 }
 
-/*=============== BASE ===============*/
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+  /* Estilo para la imagen grande con zoom */
+  .responsive-image {
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    max-width: 100%; /* No deja que la imagen se agrande más que el contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionar */
+    transition: transform 0.3s ease-in-out; /* Transición suave para el zoom */
+  }
 
-html {
-  scroll-behavior: smooth;
-}
+  /* Estilo para las tarjetas debajo de la imagen */
+  .card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
 
-body {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-}
+  .card {
+    width: 18rem; /* Tamaño de cada tarjeta */
+    margin: 10px; /* Espaciado entre las tarjetas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
 
-ul {
-  list-style: none;
-}
+  .card img {
+    height: 200px; /* Altura fija de la imagen en la tarjeta */
+    object-fit: cover; /* Hace que la imagen se ajuste bien a la tarjeta */
+  }
+  .navbar-brand span {
+    font-size: 1rem;  /* Ajusta el tamaño del texto */
+    color: #f8f9fa;     /* Cambia el color del texto */
+    font-weight: bold;  /* Haz que el texto sea en negrita */
+  }
+  .navbar-brand {
+    margin-right: 50px; /* Ajusta el valor según lo que necesites */
+  }
 
-a {
-  text-decoration: none;
-}
+  .carousel-item {
+    position: relative;
+    overflow: hidden;
+  }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-/*=============== REUSABLE CSS CLASSES ===============*/
-.container {
-  max-width: 1120px;
-  margin-inline: 1.5rem;
-}
-
-/*=============== HEADER & NAV ===============*/
-.header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: var(--dark-color);
-  z-index: var(--z-fixed);
-}
-
-.nav {
-  position: relative;
-  height: var(--header-height);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--white-color);
-}
-.nav__logo {
-  color: var(--white-color);
-  font-weight: var(--font-semi-bold);
-  transition: color .4s;
-  font-size: 1.4rem;
-}
-
-.nav__logo:hover {
-  color: var(--first-color);
-}
-
-.nav__toggle, 
-.nav__close {
-  display: flex;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* Navigation for mobile devices */
-@media screen and (max-width: 1150px) {
-  .nav__menu {
-    position: fixed;
-    top: -120%;
-    left: 0;
-    background-color: var(--dark-color);
-    box-shadow: 0 8px 16px hsla(216, 24%, 8%, .2);
+  .carousel-image {
+    max-height: 800px;
+    object-fit: cover;
     width: 100%;
-    padding-block: 4rem;
-    z-index: var(--z-fixed);
-    transition: top .4s;
-  }
-}
-
-.nav__list {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  row-gap: 2.5rem;
-}
-
-.nav__link {
-  color: var(--white-color);
-  font-weight: var(--font-semi-bold);
-  transition: color .4s;
-}
-
-.nav__link:hover {
-  color: var(--first-color);
-}
-
-.nav__close {
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-}
-
-.nav__actions {
-  display: flex;
-  align-items: center;
-  column-gap: .75rem;
-}
-
-/* Show menu */
-.show-menu {
-  top: 0;
-}
-
-/*=============== DROPDOWN ===============*/
-.dropdown {
-  position: relative;
-}
-
-.dropdown__profile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: .25rem;
-  cursor: pointer;
-}
-
-.dropdown__image {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  background-color: var(--first-color);
-  border-radius: 50%;
-  overflow: hidden;
-  display: grid;
-  justify-items: center;
-}
-
-.dropdown__image img {
-  position: absolute;
-  width: 38px;
-  bottom: -1px;
-}
-
-.dropdown__names h3 {
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-semi-bold);
-}
-
-.dropdown__names span {
-  display: block;
-  font-size: var(--small-font-size);
-  font-weight: var(--font-medium);
-  text-align: right;
-}
-
-.dropdown__list {
-  position: absolute;
-  top: 4.5rem;
-  background-color: var(--dark-color);
-  box-shadow: 0 8px 16px hsla(216, 24%, 8%, .2);
-  display: grid;
-  row-gap: .25rem;
-  padding: 1rem 1.25rem;
-  border-radius: .25rem;
-  z-index: var(--z-tooltip);
-  transform: translateY(-.75rem);
-  opacity: 0;
-  transition: transform .4s, opacity .4s;
-  pointer-events: none;
-}
-
-.dropdown__link {
-  color: var(--white-color);
-  display: flex;
-  align-items: center;
-  column-gap: 1rem;
-  padding: .25rem 1.5rem .25rem .5rem;
-  border-radius: .25rem;
-  transition: background-color .4s;
-}
-
-.dropdown__link i {
-  font-size: 1rem;
-}
-
-.dropdown__link span {
-  font-size: var(--small-font-size);
-  font-weight: var(--font-medium);
-}
-
-.dropdown__link:hover {
-  background-color: var(--dark-color-light);
-}
-
-.dropdown__list::after {
-  content: "";
-  width: 16px;
-  height: 16px;
-  background-color: var(--dark-color);
-  position: absolute;
-  top: -8px;
-  left: 0;
-  right: 0;
-  margin-inline: auto;
-  rotate: -45deg;
-}
-
-/* Show dropdown */
-.show-dropdown .dropdown__list {
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: initial;
-}
-
-.nav__icon {
-  width: 25px;
-  height: 25px;
-  margin-right: 8px;
-  vertical-align: middle;
-}
-
-.showcase {
-  background: url('../img/logo_principal.png') no-repeat center center/cover;
-  background-size: 120% 100%; 
-  color: #fff;
-  text-align: center;
-  padding: 100px 20px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-}
-
-.showcase::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Overlay to darken the background image */
-  z-index: 1;
-}
-
-.showcase .container {
-  position: relative;
-  z-index: 2;
-  max-width: 2000px; /* Limita el ancho del contenido */
-  text-align: center; 
-}
-.showcase h1 {
-  font-size: 60px; 
-  margin-bottom: 20px;
-  font-family: 'Georgia', serif;
-}
-
-.showcase p {
-  font-size: 1.2em;
-  margin-bottom: 0;
-  font-family: 'Arial', sans-serif;
-}
-
-/* Limitar el ancho de la imagen */
-.showcase img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.showcase-promociones {
-  background: url('../img/portada.jpg') no-repeat center center/cover;
-  background-size: cover; 
-  color: #fff;
-  text-align: center;
-  padding: 100px 20px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh; /* Ajusta la altura según sea necesario */
-  width: 100%; /* Ajusta el ancho según sea necesario */
-}
-
-.showcase-promociones::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Overlay to darken the background image */
-  z-index: 1;
-}
-
-.showcase-promociones .container {
-  position: relative;
-  z-index: 2;
-  max-width: 2000px; /* Limita el ancho del contenido */
-  text-align: center; 
-}
-
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
-@media screen and (max-width: 320px) {
-  .container {
-    margin-inline: 1rem;
-  }
-}
-
-/* For large devices */
-@media screen and (min-width: 1150px) {
-  .container {
-    margin-inline: auto;
   }
 
-  .nav {
-    height: calc(var(--header-height) + 2rem);
-    column-gap: 4rem;
-  }
-  .nav__toggle, 
-  .nav__close {
-    display: none;
-  }
-  .nav__list {
-    flex-direction: row;
-    column-gap: 3rem;
-  }
-  .nav__menu {
-    margin-left: auto;
+  .carousel-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+    z-index: 1;
   }
 
-  .dropdown__profile {
-    column-gap: 1rem;
+  .carousel-caption {
+    z-index: 2; /* Asegura que el texto esté por encima del difuminado */
   }
-  .dropdown__list {
-    top: 5.5rem;
-  }
-}

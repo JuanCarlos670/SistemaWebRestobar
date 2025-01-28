@@ -1,35 +1,115 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%=title %></title>
-    <%- include('partials/head') %>
-    
-</head>
-<body>
-    <div class="main-container">
-        <%- include('partials/navigation') %>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title><%=title %></title>
+      <%- include('partials/head') %>
+   </head>
+   <body>
+      
+    <%- include('partials/navigation') %>
 
-        <section class="content">
-            <div class="container">
-                <section class="about-section">
-                    <img src="/img/nosotros.jpg" alt="Restobar" />
-                    <div class="text">
-                        <h2>Sobre Nosotros</h2>
-                        <p>En <strong>La Parrilla de Chugo</strong>, nos especializamos en ofrecer una experiencia gastronómica única, destacándonos por la calidad de nuestros productos y el ambiente acogedor que brindamos a nuestros clientes. Nuestro compromiso es ofrecer las mejores parrillas de la ciudad, elaboradas con los ingredientes más frescos y de la más alta calidad.</p>
-                        <p>Desde nuestra apertura, hemos trabajado arduamente para convertirnos en el establecimiento preferido de los amantes de la parrilla. Nuestras recetas están diseñadas para resaltar los sabores auténticos, cuidando cada detalle para garantizar la satisfacción de nuestros comensales.</p>
-                        <p>Le extendemos una cordial invitación a visitarnos y disfrutar de una experiencia culinaria que quedará grabada en su memoria. ¡Esperamos darle la bienvenida pronto!</p>
-                    </div>
-                </section>
-            </div>
-        </section>
-
-        <footer>
-            <p>&copy; 2025 La Parrilla de Chugo. Todos los derechos reservados.</p>
-        </footer>
+    <!-- Sección Sobre Nosotros -->
+<section class="container my-5">
+    <div class="row align-items-center">
+      <!-- Columna de la imagen -->
+      <div class="col-md-6 mb-4 mb-md-0 text-center">
+        <img src="https://scontent.flim15-2.fna.fbcdn.net/v/t39.30808-6/432757655_394133023427325_5991668287396690545_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=INLJiLrSF64Q7kNvgGmFlzp&_nc_oc=Adg9N3NPlEwqoWxSddpQ7octYMwlWaWAHtlC55VIJWLZj6UmK0Fom2r5h5J-bnqgSegDOEPWy-_IcGU3T8Fq1q48&_nc_zt=23&_nc_ht=scontent.flim15-2.fna&_nc_gid=AsBX19cV3Yh9NVawGib1jlJ&oh=00_AYD7YFtdZH1URWk4PT_6nI-ofOkQEgHhQRkpJrfzM40Oqg&oe=679EED93" 
+          alt="Sobre Nosotros" 
+          class="img-fluid rounded shadow-lg" 
+          style="max-height: 550px; object-fit: cover;">
+      </div>
+      <!-- Columna del texto -->
+      <div class="col-md-6">
+        <h2 class="fw-bold text-center text-md-start mb-4" style="font-size: 2.5rem;">Sobre Nosotros</h2>
+        <p style="font-size: 1.25rem; line-height: 1.8;">
+          En <strong>La Parrilla de Chugo</strong>, nos especializamos en ofrecer una experiencia gastronómica única, destacándonos por la calidad de nuestros productos y el ambiente acogedor que brindamos a nuestros clientes. Nuestro compromiso es ofrecer las mejores parrillas de la ciudad, elaboradas con los ingredientes más frescos y de la más alta calidad.
+        </p>
+        <p style="font-size: 1.25rem; line-height: 1.8;">
+          Desde nuestra apertura, hemos trabajado arduamente para convertirnos en el establecimiento preferido de los amantes de la parrilla. Nuestras recetas están diseñadas para resaltar los sabores auténticos, cuidando cada detalle para garantizar la satisfacción de nuestros comensales.
+        </p>
+        <p style="font-size: 1.25rem; line-height: 1.8;">
+          Le extendemos una cordial invitación a visitarnos y disfrutar de una experiencia culinaria que quedará grabada en su memoria. ¡Esperamos darle la bienvenida pronto!
+        </p>
+      </div>
     </div>
-    <!--=============== MAIN JS ===============-->
-    <script src="/js/main.js"></script>
-</body>
+  </section>
+  
+  <!-- Carrusel de Familias Disfrutando (Altura Ampliada y Responsive) -->
+  <div id="carouselExampleCaptions" class="carousel slide mt-5" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <!-- Primera imagen -->
+      <div class="carousel-item active position-relative">
+        <img src="https://scontent.flim25-1.fna.fbcdn.net/v/t39.30808-6/411927701_339210432252918_7250079477227753405_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=0g4pbSGVMTAQ7kNvgEST3tM&_nc_oc=Adj0E5-yrVzyTcmVQX9q96e2lT4fD36cykEt-TMsNujTOQqYQsF-tfrMcIpsBRXHYwieWuPYWDceA-1ZM1pePArK&_nc_zt=23&_nc_ht=scontent.flim25-1.fna&_nc_gid=AWQTHCNrPOShy-ua9orr3ev&oh=00_AYCnaXKoOzuFCxakymNWEn7TWWDUgdwdBJooKgDXpIDR3A&oe=679EDF6D" class="d-block w-100 img-fluid rounded carousel-image" alt="Familia disfrutando de una parrillada">
+        <div class="carousel-caption d-none d-md-block" style="color: rgb(255, 255, 255);">
+          <h5 class="text-uppercase fw-bold">¡Momentos que saben mejor juntos!</h5>
+          <p>Disfruta de una comida inolvidable con los que más quieres, solo en La Parrilla de Chugo.</p>
+        </div>
+      </div>
+      <!-- Segunda imagen -->
+      <div class="carousel-item position-relative">
+        <img src="https://scontent.flim25-1.fna.fbcdn.net/v/t39.30808-6/428601704_377263145114313_3459916979701740083_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=QwCol3OjqX4Q7kNvgGNflux&_nc_oc=AdjvaihTMzWZjc6XEVoYXwC3y1rBu5uHX4erGnON1RJiyJgfeNZvy2AnEBTQ2yoyv3cKejR2OoK9dEE02-MeuTzv&_nc_zt=23&_nc_ht=scontent.flim25-1.fna&_nc_gid=AB8ZtjSb-NTNjH8zgaXWJjA&oh=00_AYBDHX9uLKtSbn-t4nVAlILlrVsTZCiQ6llgOvBow9X3cQ&oe=679F008A" class="d-block w-100 img-fluid rounded carousel-image" alt="Familia compartiendo una cena">
+        <div class="carousel-caption d-none d-md-block" style="color: rgb(255, 255, 255);">
+          <h5 class="text-uppercase fw-bold">Sabores que unen corazones</h5>
+          <p>Haz de cada comida una celebración especial en nuestra cálida atmósfera familiar.</p>
+        </div>
+      </div>
+      <!-- Tercera imagen -->
+      <div class="carousel-item position-relative">
+        <img src="img/familia3.jpg" class="d-block w-100 img-fluid rounded carousel-image" alt="Niños y padres comiendo juntos">
+        <div class="carousel-caption d-none d-md-block" style="color: rgba(255, 255, 255, 0.952);">
+          <h5 class="text-uppercase fw-bold">Risas, recuerdos y buena comida</h5>
+          <p>Crea momentos inolvidables alrededor de nuestras deliciosas parrillas.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+  <!-- Título y Ubicación -->
+  <div class="mt-5 text-center">
+    <h2>¿Dónde encontrarnos?</h2>
+    
+    <!-- Mapa de Google Maps incrustado, con estilo personalizado para hacerlo más grande -->
+    <div class="d-flex justify-content-center">
+      <div class="map-container mb-4" style="max-width: 800px; width: 100%; height: 500px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1379.734135233328!2d-76.82330314224915!3d-12.010665975713009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105e929fb8a766f%3A0x103a88c823cd1316!2sLa%20parrilla%20de%20chugo!5e0!3m2!1ses!2spe!4v1738086214518!5m2!1ses!2spe" 
+          class="embed-responsive-item" style="width: 100%; height: 100%;" 
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+    
+    <!-- Texto de referencia y número de celular -->
+    <p class="mt-3"><strong> Estamos Ubicados en 
+      Huaycan, zona A Ucv 23, Lima, Peru</strong></p>
+    
+    <!-- Horarios de Atención -->
+    <h4 class="mt-4">Horarios de Atención</h4>
+  <p>Lunes a Viernes: 16:00 PM - 22:00 PM</p>
+  <p>Sábados y Domingos: 18:00 PM - 22:00 PM</p>
+  
+  <!-- Imagen responsiva debajo de los horarios -->
+  <div class="mt-4">
+    <img src="img/promo_ubicacion.jpg" alt="Imagen Descripción" class="img-fluid rounded" style="max-width: 350px;">
+  </div>
+  
+  <!-- Espaciado entre la imagen y el footer -->
+  <div class="mt-5"></div>
+  </div>
+
+    <%- include('partials/footer') %>
+   </body>
 </html>

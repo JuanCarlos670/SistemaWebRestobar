@@ -1,91 +1,57 @@
-<!--==================== HEADER ====================-->
-<header class="header">
-    <nav class="nav container">
-       <a href="#" class="nav__logo">La Parrilla de Chugo</a>
-
-       <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-             <li>
-                <a href="/" class="nav__link">Inicio</a>
-             </li>
-             
-             <li class="nav__item dropdown">
-                <div class="dropdown__menu" id="dropdown-menu">
-                    <div class="dropdown__profile">
-                        <div class="dropdown__names">
-                            <h3>Carta Gourmet</h3>
-                        </div>
-                    </div>
-    
-                    <div class="dropdown__list">
-                        <a href="/platos" class="dropdown__link">
-                            <i class="ri-restaurant-line"></i>
-                            <span>Platos</span>
-                        </a>
-    
-                        <a href="/bebidas" class="dropdown__link">
-                            <i class="ri-cup-line"></i>
-                            <span>Bebidas</span>
-                        </a>
-    
-                        <a href="/promociones" class="dropdown__link">
-                            <i class="ri-price-tag-3-line"></i>
-                            <span>Promociones</span>
-                        </a>
-                    </div>
-                </div>
-            </li>
-
-             <li>
-                <a href="/about" class="nav__link">Sobre Nosotros</a>
-             </li>
-
-             <li>
-                <a href="/carrito" class="nav__link">
-                    <i class="ri-shopping-bag-line nav__icon"></i>
-                    Carrito
-                </a>
-            </li>
-          </ul>
-
-          <!-- Close button -->
-          <div class="nav__close" id="nav-close">
-             <i class="ri-close-large-line"></i>
-          </div>
-       </div>
-
-       <div class="nav__actions">
-          <!-- Dropdown -->
-
-          <div class="dropdown" id="dropdown">
-             <div class="dropdown__profile">
-                <div class="dropdown__names">
-                   <span>Ericson Urbano</span>
-                   <span>Usuario</span>
-                </div>
- 
-                <div class="dropdown__image">
-                   <img src="/img/user.png" alt="image">
-                </div>
-             </div>
-
-             <div class="dropdown__list">
-                <a href="#" class="dropdown__link">
-                   <i class="ri-user-line"></i>
-                   <span>Perfil</span>
-                </a>
-
-                <a href="#" class="dropdown__link">
-                   <i class="ri-logout-box-r-line"></i>
-                   <span>Salir</span>
-                </a>
-             </div>
-          </div>
-
-          <!-- Toggle button -->
-          <div class="nav__toggle" id="nav-toggle">
-             <i class="ri-menu-line"></i>
-          </div>
-       </div>
-    </nav>
- </header>
+<nav class="navbar navbar-expand-lg"> <!-- Puedes cambiar 'bg-dark' por el color que desees -->
+   <div class="container-fluid">
+     <!-- Aquí va el logo de tu empresa -->
+     <a class="navbar-brand" href="/">
+       <img src="img/login_prinicipal.jpg" alt="Logo de la empresa" width="100" height="80">
+       <span class="ms-2">La Parrilla de Chugo</span>
+     </a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNavDropdown">
+       <ul class="navbar-nav">
+           <!-- Home -->
+           <li class="nav-item">
+             <a class="nav-link active" aria-current="page" href="/">
+               <i class="fas fa-home"></i> Home
+             </a>
+           </li>
+           
+           <!-- Carta Gourmet Dropdown -->
+           <li class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               <i class="fas fa-utensils"></i> Carta Gourmet
+             </a>
+             <ul class="dropdown-menu">
+               <li><a class="dropdown-item" href="/platos"><i class="fas fa-utensil-spoon"></i> Platos</a></li>
+               <li><a class="dropdown-item" href="/bebidas"><i class="fas fa-cocktail"></i> Bebidas</a></li>
+               <li><a class="dropdown-item" href="/promociones"><i class="fas fa-tags"></i> Promociones</a></li>
+             </ul>
+           </li>
+         
+           <!-- Sobre Nosotros -->
+           <li class="nav-item">
+             <a class="nav-link" href="/about"><i class="fas fa-users"></i> Sobre Nosotros</a>
+           </li>
+         
+           <!-- Carrito -->
+           <li class="nav-item">
+             <a class="nav-link" href="/carrito"><i class="fas fa-shopping-cart"></i> Carrito</a>
+           </li>
+         </ul>
+         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+           <li class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               <!-- Imagen del usuario al lado de "Cuenta" -->
+               <img src="https://c0.klipartz.com/pngpicture/393/995/gratis-png-aspria-fitness-computer-icons-usuario-icono-de-mi-cuenta-thumbnail.png" alt="Usuario" class="user-img" width="30" height="30">
+               Cuenta
+             </a>
+             <ul class="dropdown-menu">
+                 <li><a class="dropdown-item" href="/login"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                 <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+             </ul>
+           </li>
+         </ul>
+     </div>
+   </div>
+ </nav>
