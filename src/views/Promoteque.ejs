@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title><%=title %></title>
+      <%- include('partials/head') %>
+   </head>
+   <body>
+      
+    <%- include('partials/navigation') %>
+
+    <!-- Sección Sobre Nosotros -->
+    <section class="container my-5">
+        <div class="row align-items-center">
+            <!-- Columna de la imagen -->
+            <div class="col-md-6 mb-4 mb-md-0 text-center">
+                <img src="/img/tequeños_gratis.jpg" 
+                alt="promocion bebida" 
+                class="img-fluid rounded shadow-lg" 
+                style="max-height: 550px; object-fit: cover;">
+            </div>
+            <!-- Columna del texto -->
+            <div class="col-md-6">
+                <h2 class="fw-bold text-center text-md-start mb-4" style="font-size: 2.5rem;">¡Gran Noticia! Tequeños Gratis</h2>
+                <p style="font-size: 1.25rem; line-height: 1.8;">
+                    ¡Llegaron los tequeños rellenos de anticuchos totalmente gratis! Solo tienes que realizar tu compra de parrillas, alitas, hamburguesas, o cualquier otro platillo 
+                    mayor a 30 soles y podrás reclamar tus 4 deliciosos tequeños. Un sabor único que no puedes dejar pasar.
+                </p>
+                <p style="font-size: 1.25rem; line-height: 1.8;">
+                    ¡No te pierdas esta increíble oferta! Ven y disfruta de sabores únicos con nosotros. Aprovecha la oportunidad de saborear lo mejor y comparte esta experiencia con tus amigos y familiares. 
+                    ¡Te esperamos!
+                </p>
+            </div>
+        </div>
+    </section>
+  
+  
+  <!-- Espaciado entre la imagen y el footer -->
+  <div class="mt-5"></div>
+  </div>
+
+    <%- include('partials/footer') %>
+   </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title><%=title %></title>
+      <%- include('partials/head') %>
+   </head>
+   <body>
+      
+    <%- include('partials/navigation') %>
+
+    <!-- Sección Sobre Nosotros -->
+    <section class="container my-5">
+        <div class="row align-items-center">
+            <!-- Columna de la imagen -->
+            <div class="col-md-6 mb-4 mb-md-0 text-center">
+                <img src="/img/promo_Hamburgesas.jpg" 
+                alt="promocion bebida" 
+                class="img-fluid rounded shadow-lg" 
+                style="max-height: 550px; object-fit: cover;">
+            </div>
+            <!-- Columna del texto -->
+            <div class="col-md-6">
+                <h2 class="fw-bold text-center text-md-start mb-4" style="font-size: 2.5rem;">¡Martes de Hamburguesas!</h2>
+                <p style="font-size: 1.25rem; line-height: 1.8;">
+                    Hoy es el día perfecto para disfrutar de una hamburguesa. Ven a La Parrilla de Chugo y pide la que más te guste, preparada con los mejores ingredientes para 
+                    una experiencia deliciosa y única.
+                </p>
+                <p style="font-size: 1.25rem; line-height: 1.8;">
+                    ¡No te lo pierdas! Aprovecha esta oferta especial y saborea la hamburguesa que te hará volver por más. ¡Te esperamos con los brazos abiertos!
+                </p>
+            </div>
+        </div>
+    </section>
+  
+  
+  <!-- Espaciado entre la imagen y el footer -->
+  <div class="mt-5"></div>
+  </div>
+
+    <%- include('partials/footer') %>
+   </body>
+</html>

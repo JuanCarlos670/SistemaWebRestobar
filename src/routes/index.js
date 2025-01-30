@@ -9,6 +9,12 @@ router.get('/bebidas', (req, res) => res.render('Bebidas' ,{title: 'Bebidas'}));
 router.get('/promociones', (req, res) => res.render('Promociones' ,{title: 'Promociones'}));
 router.get('/login', (req, res) => res.render('Login' ,{title: 'Login'}));
 router.get('/registro', (req, res) => res.render('Registro' ,{title: 'Registro'}));
+router.get('/promobebida', (req, res) => res.render('Promobebida' ,{title: 'Promocion Bebidas'}));
+router.get('/promochicharron', (req, res) => res.render('Promochicharron' ,{title: 'Promocion Chicharron'}));
+router.get('/promoconsumo', (req, res) => res.render('Promoconsumo' ,{title: 'Promocion Consumo'}));
+router.get('/promodina', (req, res) => res.render('Promodina' ,{title: 'Promocion Dina'}));
+router.get('/promohamburguesa', (req, res) => res.render('Promohamburguesa' ,{title: 'Promocion Hamburguesa'}));
+router.get('/promoteque', (req, res) => res.render('Promoteque' ,{title: 'Promocion Tequeño'}));
 
 export default router;
 

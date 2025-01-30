@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title><%=title %></title>
+      <%- include('partials/head') %>
+   </head>
+   <body>
+      
+    <%- include('partials/navigation') %>
+
+    <!-- Sección Sobre Nosotros -->
+    <section class="container my-5">
+        <div class="row align-items-center">
+            <!-- Columna de la imagen -->
+            <div class="col-md-6 mb-4 mb-md-0 text-center">
+                <img src="/img/mitad_precio.jpg" 
+                alt="promocion bebida" 
+                class="img-fluid rounded shadow-lg" 
+                style="max-height: 550px; object-fit: cover;">
+            </div>
+            <!-- Columna del texto -->
+            <div class="col-md-6">
+                <h2 class="fw-bold text-center text-md-start mb-4" style="font-size: 2.5rem;">¡La Segunda por Mitad de Precio!</h2>
+                <p style="font-size: 1.25rem; line-height: 1.8;">
+                    Si te quedaste con ganas de un delicioso chicharrón de pollo, ¡no te preocupes! Ahora tienes la oportunidad de llevarte la segunda por mitad de precio. 
+                    Disfruta de esta increíble promoción y comparte la experiencia con alguien más.
+                </p>
+                <p style="font-size: 1.25rem; line-height: 1.8;">
+                    Aprovecha esta oferta exclusiva, disponible solo por tiempo limitado. No dejes pasar la oportunidad de saborear el mejor chicharrón de pollo, 
+                    y llevarte la segunda por un precio increíble. ¡Te esperamos!
+                </p>
+            </div>
+        </div>
+    </section>
+  
+  
+  <!-- Espaciado entre la imagen y el footer -->
+  <div class="mt-5"></div>
+  </div>
+
+    <%- include('partials/footer') %>
+   </body>
+</html>
