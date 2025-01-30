@@ -10,6 +10,7 @@ const config ={
         rejectUnauthorized: false
     }
 }
+
 export async function Conectar() {
     const cliente = new Client(config);
     try {

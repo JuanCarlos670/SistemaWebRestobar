@@ -10,7 +10,6 @@
       padding: 3px 0; /* Reducir el espacio dentro del menú desplegable */
     }
     
-    /* Reducir el tamaño de las opciones del dropdown */
     .dropdown-menu .dropdown-item {
       font-size: 0.9rem; /* Reducir el tamaño de la fuente */
       padding: 5px 10px; /* Reducir el padding de cada opción */
@@ -31,7 +30,7 @@
       background-color: #6b4818; /* Marrón claro */
   }
 
-      /* Redondear la imagen del logo */
+
       .navbar-brand img {
           border-radius: 50%; /* Hace que la imagen sea circular */
         }
@@ -51,7 +50,6 @@
 background-color: #6b4818 !important; /* Fondo blanco cuando el menú se expande */
 }
 
-  /* Estilo para la imagen grande con zoom */
   .responsive-image {
     width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
     max-width: 100%; /* No deja que la imagen se agrande más que el contenedor */
